@@ -1,0 +1,43 @@
+Задание №1: Linux terminal (gitbash) basic commands
+
+1) Посмотреть где я: pwd
+2) Создать папку: mkdir folder_test
+3) Зайти в папку: cd folder_test
+4) Создать 3 папки: mkdir folder_1 folder_2 folder_3 
+5) Зайти в любую папку: cd folder_1
+6) Создать 5 файлов (3 txt, 2 json): touch file_1.txt file_2.txt file_3.txt file_4.json file_5.json
+7) Создать 3 папки: mkdir one_one one_two one_three
+8) Вывести список содержимого папки: ls -la
+9) Открыть любой txt файл: vim file1.txt
+10) Написать в документ любой текст: i(insert) some text(string1) some test(string2) some text(string3) some text(string4)
+11) Сохранить и выйти: esc :wq (write and quit)
+12) Выйти из папки на уровень выше: cd ..
+13) Переместить любые 2 файла, которые вы создали, в любую другую папку: mv D:/QA/group28/folder_test/folder_1/file1.txt D:/QA/group28/folder_test/folder_1/file4.json D:/QA/group28/folder_test/folder_2/
+14) Скопировать любые 2 файла, которые вы создали, в любую другую папку: cp D:/QA/group28/folder_test/folder_1/file2.txt D:/QA/group28/folder_test/folder_1/file5.json D:/QA/group28/folder_test/folder_2/
+15) Найти файл по имени: find . -name "file1.txt"
+16) Посмотреть содержимое файла в реальном времени (команда grep), изучите как она работает: grep "some" folder_1/file2.txt
+17) Вывести несколько первых строк из текстового файла: head -2 folder_2/file1.txt
+18) Вывести несколько последних строк из текстового файла: tail -2 reposit/gitbash_HW.txt
+19) Посмотреть содержимое длинного файла (команда less), изучите как она работает: less reposit/gitbash_HW.txt
+20) Вывести дату и время: date
+
+Задание*
+
+1) Отправить запрос на сервер: curl http://162.55.220.72:5005/object_info_3?name=Shuhrat&age=31&salary=1000
+
+2) Написать скрипт который автоматически выполнит пункты 3,4,5,6,7,8,13 из задания 1:
+
+	Файл: HW_Linux1_2.sh
+	Запуск скрипта: ./HW_Linux1_2.sh
+
+содержимое скрипта:
+#!/bin/bash
+cd /D/QA/group28/folder_test/
+mkdir folder_1 folder_2 folder_3
+cd folder_1/
+touch file_1.txt file_2.txt file_3.txt file_4.json file_5.json
+mkdir one_one one_two one_three
+cd ..
+ls -la
+mv D:/QA/group28/folder_test/folder_1/file_1.txt D:/QA/group28/folder_test/folder_1/file_4.json D:/QA/group28/folder_test/folder_2
+
